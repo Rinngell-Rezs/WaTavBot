@@ -16,7 +16,7 @@ MMORPG basado en texto, en forma de Bot de Telegram.
 
 [(?) → Aún sin confirmar]
 
-Cosas por hacer: 
+### Cosas por hacer: 
 
 ► (weapons.py) Terminar la lista de armas 
 
