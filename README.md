@@ -1,9 +1,14 @@
-#Wanderers' Tavern Bot
+# Wanderers' Tavern Bot
 
 MMORPG basado en texto, en forma de Bot de Telegram. 
 > Aquí es donde comienza tu aventura, castillos, dragones, luchas épicas, y claro, beber y festejar con amigos... ¿Qué más puedes pedir?.
 
-#####El juego se encuentra aún en desarrollo, sin embargo ya es posible jugar duelos con amigos a través de mensajes en linea.
+##### El juego se encuentra aún en desarrollo, sin embargo ya es posible jugar duelos con amigos a través de mensajes en linea. 
+
+##### Para jugar se necesita una cuenta de Telegram. Una vez dentro, bassta con buscar @WaTavBot en Telegram para acceder al bot. 
+
+
+
 
 [* → Aún no implementado]
 
