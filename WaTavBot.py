@@ -820,7 +820,7 @@ def reload(update: Update, context: CallbackContext):
                 parse_mode = ParseMode.HTML
                 )
             return
-        threading.Thread(target = reloadTask).start() 
+        threading.Thread(target = reloadTask).start()
     return
 
 
@@ -952,9 +952,9 @@ def inlinequery(update: Update, context: CallbackContext):
         results.append(
                         InlineQueryResultArticle(
                                                     id=uuid4(),
-                                                    title="🎖{} Tournament🏅".format(query.query.capwords()),
+                                                    title="🎖{} Tournament🏅".format(query.query.title()),
                                                     input_message_content= InputTextMessageContent(
-                                                                                                    message_text = "<b>Join the {} Tournament!</b>\n\nPlayers:\n".format(query.query.capwords()),
+                                                                                                    message_text = "<b>Join the {} Tournament!</b>\n\nPlayers:\n".format(query.query.title()),
                                                                                                     parse_mode=ParseMode.HTML
                                                                                                     #reply_markup = reply_markup,
                                                                                                  )
@@ -1186,8 +1186,8 @@ def winfo(update: Update, context: CallbackContext):
         +"\n"+"\t"*4+" Critical: <code>{crit}</code>".format(crit=str(int(float(weapon["crit"])*100)))
         +"\n"+"\t"*4+" Speed: <code>{spe}</code>".format(spe=str(int(float(weapon["spe"])*100)))
         +"\n"+"\t"*4+" Dual Hand: <code>{dual}</code>".format(dual= ("Yes" if(weapon["dual"] == True) else "No"))
-        +"\n"+"\t"*4+" Type: <code>{g_type}</code>".format(g_type=weapon["g_type"].capwords())
-        +"\n"+"\t"*4+" Class: <code>{type}</code>".format(type=weapon["type"].capwords())
+        +"\n"+"\t"*4+" Type: <code>{g_type}</code>".format(g_type=weapon["g_type"].title())
+        +"\n"+"\t"*4+" Class: <code>{type}</code>".format(type=weapon["type"].title())
     )
     update.message.reply_text(
                                 text=text,
