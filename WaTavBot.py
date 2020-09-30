@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 from telegram import *
 from telegram.ext import *
 #TOKEN = "688638504:AAEInD-EFrYbKkw6tlJBIIpRmQsBJRbpTio" #TavernKeeperBot
-TOKEN = "786177048:AAFkRsFe2a4cIjrj_b7AvxY8o4i0agrsnrA" #WaTavBot
+TOKEN = "1184989658:AAFZfzq2y-lV29GjpVJfiXaH01qQBhdwyRI" #WaTavBot
 # Create the Updater and pass it your bot's token.
 updater = Updater(TOKEN, use_context=True)
 (ME,    MEINFO,     MEWEAPONS,
@@ -820,7 +820,7 @@ def reload(update: Update, context: CallbackContext):
                 parse_mode = ParseMode.HTML
                 )
             return
-        threading.Thread(target = reloadTask).start()
+        threading.Thread(target = reloadTask).start() 
     return
 
 
@@ -1091,7 +1091,7 @@ def duellingcourt(update: Update, context: CallbackContext):
     return DC
 
 def blacksmith(update: Update, context: CallbackContext):
-    text=str("Heya! Good day, adventurer! I'm {name}, the blacksmith. I sell the best weapons you'll be able to find this side of the sea!".format(name="Crimson")
+    text=str("Heya! Good day, adventurer! I'm {name}, the blacksmith. I sell the best weapons you'll be able to find this side of the sea!".format(name="Pyot'r")
         +"\nYou see... Right now I don't have my hammer, my anvil nor my press, which I use to forge new weapons, so, I'm not taking orders right now..."
         +"\nFortunately, I have a stash of weapons on my depot. So, if you want, you can take a look at them, I have weapons for all tastes, as you'll see.")
     IKB = InlineKeyboardButton
@@ -1373,8 +1373,8 @@ def main():#if __name__ == '__main__':
     global updater
     conv_handler = ConversationHandler(
         entry_points=[
-            CommandHandler('start', start),
-            CommandHandler('register', register),
+            #CommandHandler('start', start),
+            CommandHandler('start', register),
             MessageHandler(Filters.regex("^(🎫 Traveller Card)$"), me),#Returns ME
             MessageHandler(Filters.regex("^(🍻 Beer)$"), beer),#Returns BR
             MessageHandler(Filters.regex("^(⚔️ Duelling Court)$"), duellingcourt),#Returns DC

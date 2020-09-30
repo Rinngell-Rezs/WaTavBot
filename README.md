@@ -1,3 +1,5 @@
+Wanderers' Tavern Bot
+
 [* → Aún no implementado]
 
 [() → Script a modificar]
