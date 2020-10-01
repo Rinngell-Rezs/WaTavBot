@@ -1381,14 +1381,14 @@ def main():#if __name__ == '__main__':
             MessageHandler(Filters.regex("^(⚒ Blacksmith)$"), blacksmith),#Returns BS
             MessageHandler(Filters.regex("^(🎲 Lucky Seven)$"), luckyseven),#returns L7
             MessageHandler(Filters.regex("^(📝 Help)$"), help),
-            MessageHandler(Filters.regex(r"^\/info_\d+$"), winfo)], 
+            MessageHandler(Filters.regex(r"^\/info_\d+$"), winfo),
             CommandHandler('reload', reload),
             MessageHandler(Filters.text,register)
             ],
 
         states={
             ME: [MessageHandler(Filters.regex("^(🗡 Weapons)$"), owned),
-                MessageHandler(Filters.regex(r"^\/on_\d+$"), equip),
+                MessageHandler(Filters.regex(r"^\/on_\d+$"), equip)],
 
             #BR: [MessageHandler(Filters.regex("^(👥 Talk)$"), connect)],
 
