@@ -1410,6 +1410,7 @@ def main():#if __name__ == '__main__':
 
         fallbacks=[MessageHandler(Filters.regex("^(❌ Cancel)$"), register),
             MessageHandler(Filters.regex("^(↩️ Go Back)$"), register),
+            MessageHandler(Filters.regex(r"^\/info_\d+$"), winfo),
             CommandHandler("reload", reload)]
     )
     updater.dispatcher.add_handler(conv_handler)
