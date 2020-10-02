@@ -34,4 +34,4 @@ MMORPG basado en texto, en forma de Bot de Telegram.
 
 * (?) Añadir más juegos de azar para multijugador
 
-* (?) ¿Modo aventura?
+* (?) ¿Modo aventura? (?)También, mapa por coordenadas xyz, con detección de cercanía e interracción. 

@@ -823,7 +823,6 @@ def reload(update: Update, context: CallbackContext):
         threading.Thread(target = reloadTask).start()
     return
 
-
 def upload(player,concept,value):
     threading.Thread(target=manualupload,args=("/players/{id}".format(id=player),concept,value,)).start()
     return
@@ -1176,19 +1175,22 @@ def buy(update: Update, context: CallbackContext):
 
 def winfo(update: Update, context: CallbackContext):
     global WeaponDB
-    weapon = WeaponDB[update.message.text.replace("/info_","")]
-    #print(str(weapon))
-    text = str(
-        "<b>⚜️ {name} ⚜️</b>".format(name=weapon["name"])
-        +"\n\n<i>“{lore}”</i>\n".format(lore = weapon["lore"])
-        +"\n"+"\t"*4+" Attack: <code>{atk}</code>".format(atk = str(int(float(weapon["atk"])*100)))
-        +"\n"+"\t"*4+" Defense: <code>{df}</code>".format(df = str(int(float(weapon["def"])*100)))
-        +"\n"+"\t"*4+" Critical: <code>{crit}</code>".format(crit=str(int(float(weapon["crit"])*100)))
-        +"\n"+"\t"*4+" Speed: <code>{spe}</code>".format(spe=str(int(float(weapon["spe"])*100)))
-        +"\n"+"\t"*4+" Dual Hand: <code>{dual}</code>".format(dual= ("Yes" if(weapon["dual"] == True) else "No"))
-        +"\n"+"\t"*4+" Type: <code>{g_type}</code>".format(g_type=weapon["g_type"].title())
-        +"\n"+"\t"*4+" Class: <code>{type}</code>".format(type=weapon["type"].title())
-    )
+    try:
+        weapon = WeaponDB[update.message.text.replace("/info_","")]
+        #print(str(weapon))
+        text = str(
+            "<b>⚜️ {name} ⚜️</b>".format(name=weapon["name"])
+            +"\n\n<i>“{lore}”</i>\n".format(lore = weapon["lore"])
+            +"\n"+"\t"*4+" Attack: <code>{atk}</code>".format(atk = str(int(float(weapon["atk"])*100)))
+            +"\n"+"\t"*4+" Defense: <code>{df}</code>".format(df = str(int(float(weapon["def"])*100)))
+            +"\n"+"\t"*4+" Critical: <code>{crit}</code>".format(crit=str(int(float(weapon["crit"])*100)))
+            +"\n"+"\t"*4+" Speed: <code>{spe}</code>".format(spe=str(int(float(weapon["spe"])*100)))
+            +"\n"+"\t"*4+" Dual Hand: <code>{dual}</code>".format(dual= ("Yes" if(weapon["dual"] == True) else "No"))
+            +"\n"+"\t"*4+" Type: <code>{g_type}</code>".format(g_type=weapon["g_type"].title())
+            +"\n"+"\t"*4+" Class: <code>{type}</code>".format(type=weapon["type"].title())
+        )
+    except KeyError:
+        text = "<code>[NO INFORMATION]</code>"
     update.message.reply_text(
                                 text=text,
                                 parse_mode=ParseMode.HTML

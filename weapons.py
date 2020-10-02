@@ -19,7 +19,7 @@ weapons = {
     "200":{
         'name': 'Worker Hammer',
         'atk': 1.15,
-        'crit': 0.8,
+        'crit': 1.1,
         'def': 0.5,
         'dual': False,
         'ev': 0.05,
@@ -34,8 +34,8 @@ weapons = {
     },
     "201":{
         'name': 'Peasant Sickle',
-        'atk': 1.1,
-        'crit': 0.7,
+        'atk': 1.0,
+        'crit': 1.1,
         'def': 0.6,
         'dual': False,
         'ev': 0.05,
@@ -51,7 +51,7 @@ weapons = {
     "03":{
         'name': 'Silver Sword',
         'atk': 1.1,
-        'crit': 1.1,
+        'crit': 1.15,
         'def': 0.4,
         'dual': False,
         'ev': 0.05,
@@ -66,7 +66,7 @@ weapons = {
     "04":{
         'name': 'Doppelhänder',
         'atk': 1.6,
-        'crit': 0.3,
+        'crit': 1.1,
         'def': 0.7,
         'dual': True,
         'ev': 0.04,
@@ -139,7 +139,7 @@ weapons = {
     "08":{
         'name': "Dragon Claw",
         'atk': 1,
-        'crit': 0.8,
+        'crit': 1.15,
         'def': 0.2,
         'dual': False,
         'ev': 0.02,
@@ -154,7 +154,7 @@ weapons = {
     "09":{
         'name': 'Silver Axe',
         'atk': 1.20,
-        'crit': 0.4,
+        'crit': 1.1,
         'def': 0.1,
         'dual': False,
         'ev': 0.01,
@@ -170,8 +170,8 @@ weapons = {
     "10":{
         'name': 'Executioner Greataxe',
         'atk': 1.70,
-        'crit': 0.15,
-        'def': 0.4,
+        'crit': 1.1,
+        'def': 0.2,
         'dual': True,
         'ev': 0.001,
         'g_type': "axe",
@@ -184,7 +184,7 @@ weapons = {
     "11":{
         'name': 'Battle Axe',
         'atk': 1.15,
-        'crit': 0.5,
+        'crit': 1.1,
         'def': 0.4,
         'dual': False,
         'ev': 0.04,
@@ -198,10 +198,10 @@ weapons = {
     "12":{
         'name': 'Royal Halberd',
         'atk': 1.1,
-        'crit': 1.2,
+        'crit': 1.15,
         'def': 0.7,
         'dual': True,
-        'ev': 0.15,
+        'ev': 0.1,
         'g_type': "polearm",
         'lore': str("Long-hilted weapon mixing spear and axe is difficult to handle, requiring both strength and dexterity. Designed for the royal guard of a diistant kingdom. "
             +"The Halberd has two elementary attacks: Spear-like thrusting and large sweeping swings. However, one false swing and the wielder is left wide open."),
@@ -211,15 +211,15 @@ weapons = {
     },
     "13":{
         'name': 'Grand Lance',
-        'atk': 1,
-        'crit': 1,
-        'def': 1,
-        'dual': False,
-        'ev': 1,
+        'atk': 1.5,
+        'crit': 1.15,
+        'def': 0.2,
+        'dual': True,
+        'ev': 0.03,
         'g_type': "polearm",
-        'lore': str(""),
-        'price': 0,
-        'spe': 1,
+        'lore': str("It is customary to use in jousting, allowing the knight to rely on the strength of his horse to score accurate blows. However, a man of sufficient strength could make good use of this weapon, even on foot."),
+        'price': 160,
+        'spe': 0.15,
         'type': 'lance'
     },
     "14":{
@@ -237,28 +237,31 @@ weapons = {
     },
     "15":{
         'name': 'Headhunter',
-        'atk': 1,
-        'crit': 1,
-        'def': 1,
-        'dual': False,
-        'ev': 1,
+        'atk': 1.15,
+        'crit': 1.25,
+        'def': 0.7,
+        'dual': True,
+        'ev': 0.1,
         'g_type': "polearm",
         'lore': str(""),
-        'price': 0,
-        'spe': 1,
+        'price': 130,
+        'spe': 0.9,
         'type': 'scythe'
     },
     "16":{
         'name': 'Frying Pan',
-        'atk': 1,
-        'crit': 1,
-        'def': 1,
+        'atk': 0.4,
+        'crit': 1.1,
+        'def': 0.8,
         'dual': False,
-        'ev': 1,
+        'ev': 0.05,
         'g_type': "hammer",
-        'lore': str(""),#Effective for killing undead
-        'price': 0,
-        'spe': 1,
+        'lore': str("Intended as cookware, not as a weapon for combat."
+            +" However, it provides decent protection against many weapons,"
+            +" due to the sturdy material it is made of. \n\nAlso, it has been proven"
+            +" to be quite effective for killing the undead." ),
+        'price': 20,
+        'spe': 0.5,
         'type': 'Cookware'
     },
     "17":{
