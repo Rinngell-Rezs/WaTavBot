@@ -32,6 +32,8 @@ import Braile as br
 import FullWidth as fw
 from tree import tree as tree
 import math
+from datetime import datetime
+import signal
 
 #Manejo de Base de Datos
 import json
@@ -721,6 +723,7 @@ def register(update: Update, context: CallbackContext):
             reply_markup=reply_markup,
             parse_mode=ParseMode.HTML
         )
+        threading.Thread(target=updateUser,args=(user,)).start()
         return ConversationHandler.END
     else:
         text = str("Well, well, well... What do we have here? You seem to be new around here, aren't ya?"
@@ -800,10 +803,20 @@ def newUser(user,pron):
         "offHW":"02",
         "pron":pron,
         "weapons":["01","02"],
-        "rank":0
+        "rank":0,
+        "lastlog":datetime.now().strftime("%d/%m/%Y %H:%M:%S")
     }
     fire.put("/players",user.id,info)
     PlayerDB[str(user.id)] = info
+    #print(PlayerDB[str(user.id)])
+    return
+
+def updateUser(user):
+    global PlayerDB
+    fire.put("/players/"+str(user.id),"username",user.username)
+    fire.put("/players/"+str(user.id),"lastlog",datetime.now().strftime("%d/%m/%Y %H:%M:%S"))
+    PlayerDB[str(user.id)]["username"] = user.username
+    PlayerDB[str(user.id)]["lastlog"] = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
     #print(PlayerDB[str(user.id)])
     return
 
@@ -1370,6 +1383,15 @@ def wpassign(weapon,user):
             upload(player=str(user.id),concept=("offHW"),value=(weapon))
     return
 
+def lastrestart(signum,frame):
+    data = {
+        "signum":str(signum),
+        "time":datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+    }
+    fire.put("/","Last_server_restart",data)
+    fire.put("/","players",PlayerDB)
+    return
+
 
 def main():#if __name__ == '__main__':
     global updater
@@ -1418,6 +1440,7 @@ def main():#if __name__ == '__main__':
     updater.dispatcher.add_handler(conv_handler)
     updater.dispatcher.add_handler(CallbackQueryHandler(queryHandler))
     updater.dispatcher.add_handler(InlineQueryHandler(inlinequery,pass_user_data=True, pass_chat_data=True))
+    updater.user_sig_handler = lastrestart
     # Start the Bot
     updater.start_polling(poll_interval = 0.1,clean = True,read_latency=1.0)
     # Run the bot until the user presses Ctrl-C or the process receives SIGINT,

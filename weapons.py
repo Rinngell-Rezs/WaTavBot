@@ -19,7 +19,7 @@ weapons = {
     "200":{
         'name': 'Worker Hammer',
         'atk': 1.15,
-        'crit': 1.1,
+        'crit': 1.4,
         'def': 0.5,
         'dual': False,
         'ev': 0.05,
@@ -35,7 +35,7 @@ weapons = {
     "201":{
         'name': 'Peasant Sickle',
         'atk': 1.0,
-        'crit': 1.1,
+        'crit': 1.4,
         'def': 0.6,
         'dual': False,
         'ev': 0.05,
@@ -51,7 +51,7 @@ weapons = {
     "03":{
         'name': 'Silver Sword',
         'atk': 1.1,
-        'crit': 1.15,
+        'crit': 1.45,
         'def': 0.4,
         'dual': False,
         'ev': 0.05,
@@ -66,7 +66,7 @@ weapons = {
     "04":{
         'name': 'Doppelhänder',
         'atk': 1.6,
-        'crit': 1.1,
+        'crit': 1.4,
         'def': 0.7,
         'dual': True,
         'ev': 0.04,
@@ -80,8 +80,8 @@ weapons = {
     },
     "05":{
         'name': 'Cutlass',
-        'atk': 0.6,
-        'crit': 1.7,
+        'atk': 0.8,
+        'crit': 1.8,
         'def': 0.3,
         'dual': False,
         'ev': 0.1,
@@ -97,7 +97,7 @@ weapons = {
     "39":{
         'name': 'Katana',
         'atk': 1.2,
-        'crit': 1.2,
+        'crit': 1.5,
         'def': 0.4,
         'dual': True,
         'ev': 0.1,
@@ -110,8 +110,8 @@ weapons = {
     },
     "06":{
         'name': "Bandit's Knife",
-        'atk': 0.56,
-        'crit': 1.47,
+        'atk': 0.6,
+        'crit': 1.7,
         'def': 0.05,
         'dual': False,
         'ev': 0.03,
@@ -139,7 +139,7 @@ weapons = {
     "08":{
         'name': "Dragon Claw",
         'atk': 1,
-        'crit': 1.15,
+        'crit': 1.45,
         'def': 0.2,
         'dual': False,
         'ev': 0.02,
@@ -154,7 +154,7 @@ weapons = {
     "09":{
         'name': 'Silver Axe',
         'atk': 1.20,
-        'crit': 1.1,
+        'crit': 1.4,
         'def': 0.1,
         'dual': False,
         'ev': 0.01,
@@ -170,7 +170,7 @@ weapons = {
     "10":{
         'name': 'Executioner Greataxe',
         'atk': 1.70,
-        'crit': 1.1,
+        'crit': 1.4,
         'def': 0.2,
         'dual': True,
         'ev': 0.001,
@@ -184,7 +184,7 @@ weapons = {
     "11":{
         'name': 'Battle Axe',
         'atk': 1.15,
-        'crit': 1.1,
+        'crit': 1.4,
         'def': 0.4,
         'dual': False,
         'ev': 0.04,
@@ -198,7 +198,7 @@ weapons = {
     "12":{
         'name': 'Royal Halberd',
         'atk': 1.1,
-        'crit': 1.15,
+        'crit': 1.45,
         'def': 0.7,
         'dual': True,
         'ev': 0.1,
@@ -212,7 +212,7 @@ weapons = {
     "13":{
         'name': 'Grand Lance',
         'atk': 1.5,
-        'crit': 1.15,
+        'crit': 1.45,
         'def': 0.2,
         'dual': True,
         'ev': 0.03,
@@ -223,23 +223,24 @@ weapons = {
         'type': 'lance'
     },
     "14":{
-        'name': '',
-        'atk': 1,
-        'crit': 1,
-        'def': 1,
+        'name': 'Hunting Spear',
+        'atk': 0.8,
+        'crit': 2,
+        'def': 0.4,
         'dual': False,
-        'ev': 1,
+        'ev': 0.7,
         'g_type': "polearm",
-        'lore': str(""),
-        'price': 0,
-        'spe': 1,
+        'lore': str("Primitive weapon, mainly used for hunting by the ancient nomads. Despite its simple aspect,"
+            +" it could take over a sabertooth in just one accurate blow."),
+        'price': 100,
+        'spe': 0.7,
         'type': 'spear'
     },
     "15":{
         'name': 'Headhunter',
         'atk': 1.15,
-        'crit': 1.25,
-        'def': 0.7,
+        'crit': 1.65,
+        'def': 0.6,
         'dual': True,
         'ev': 0.1,
         'g_type': "polearm",
