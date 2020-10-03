@@ -700,7 +700,7 @@ def start(update: Update, context: CallbackContext):
     query = update.message.from_user
     text = """You approach and see a sign at the door:\n
 <i>Excuse us, by the moment we\'re under maintenance...
-However you can always use our dueling court that is in the back. Just write: \n\"@WanderersTavernBot + <code>space</code>\"\n and press \"⚔Duel\" on any chat window to access to it.
+However you can always use our dueling court that is in the back. Just write: \n\"@WaTavBot + <code>space</code>\"\n and press \"⚔Duel\" on any chat window to access to it.
 <s>(random stuff may happen due to quantum physics.)</s>
 We\'ll be on business in a couple of days...</i>
 \n"""
@@ -763,11 +763,11 @@ def reg(update: Update, context: CallbackContext):
             +"Here, have a drink, courtesy of the house! If you like it, you can always come back and have one 🍻 Beer for just 5💰."
             +" Who knows? Maybe you can make some new friends while drinking..."
             +"\n\nWe also have a ⚔️ Duellng Court in the back, you can always come and take a challenge with another traveller,"
-            +" or you can just fight with a friend, all you have to do is to write: </i>\n\n@WanderersTavernBot + <code>space</code>\n\n<i>On any chat window,"
+            +" or you can just fight with a friend, all you have to do is to write: </i>\n\n@WaTavBot + <code>space</code>\n\n<i>On any chat window,"
             +" and pressing the ⚔Duel button, then you'll be able to challenge any friend you want, even if they haven't even visited the tavern before..."
             +"\nHuh! What is a chat window, by the way?"
             +"\n\nAnyway, you can also play 🎲 Lucky Seven in our gambling tables. Also with a stranger, or call it via inline message the same way as the duels with friends:"
-            +"</i>\n\n@WanderersTavernBot + <code>space</code>\n\n<i> and pressing the 🎲Dice button."
+            +"</i>\n\n@WaTavBot + <code>space</code>\n\n<i> and pressing the 🎲Dice button."
             +"\n\nFinally, on the back, next to the duelling court, there's a blacksmith, who forges and sells weapons of the finest quality."
             +" There you can buy anything that fits better your combat style."
             +"\n\nWith nothing more to say, make yourself comfortable, and enjoy the atmosphere and the company with a good drink!</i>")
@@ -921,7 +921,7 @@ def inlinequery(update: Update, context: CallbackContext):
                                             title="⚔Duel",
                                             reply_markup = InlineKeyboardMarkup(kb.kb(op = "data",args = "{\"op\":\"batt|p2\",\"room\":\"%s\",\"host\":\"%s\"}"%(str(int(list(ArenaList.keys())[-1])+1),str(target.id)))),
                                             input_message_content= InputTextMessageContent(
-                                                                                            message_text = "<b>⚔Duel</b>\n{} is looking for a worthy opponent...{}".format(target_name,"\n\n<code>You can also register at </code>@WanderersTavernBot<code> to customize yourself...</code>"),
+                                                                                            message_text = "<b>⚔Duel</b>\n{} is looking for a worthy opponent...{}".format(target_name,"\n\n<code>You can also register at </code>@WaTavBot<code> to customize yourself...</code>"),
                                                                                             parse_mode=ParseMode.HTML,
                                                                                             reply_markup = reply_markup,
                                                                                          )
@@ -1282,7 +1282,7 @@ def helpinfo(update: Update, context: CallbackContext):
     elif(choice == "📝⚔️ Duelling"):
         text = str("<i>Aha! So, you are interested on combat, eh?... If is that so, you're free to use the ⚔️ Duelling Court."
             +" As I said before, you can challenge a random stranger from here, or you can challenge a friend via inline message on any chat window."
-            +"\nAll you have to do is to write:</i>\n\n@WanderersTavernBot + <code>space</code>\n\n <i>and you'll be given the option to ⚔️Duel with any friend."
+            +"\nAll you have to do is to write:</i>\n\n@WaTavBot + <code>space</code>\n\n <i>and you'll be given the option to ⚔️Duel with any friend."
             +" Just keep in mind that, playing with anyone not registered has no effect on any of your character stats, such as money, experience or glory</i>")
     elif(choice == "📝⚒ Blacksmith"):
         text = str("<i>Who? Ah, yes! The guy who sells and forges weapons next to the duelling court! He's a ⚒ Blacksmith."
@@ -1293,7 +1293,7 @@ def helpinfo(update: Update, context: CallbackContext):
             +"\nYou just have to get a higher number than your opponent on the dices, and you'll win the match. But if the dices add up to 7, "
             +"you'll automatically win the match! Simple. \nWell... Unless there's a tie. In that case only the highest dice will be counted."
             +"\n\nYou can also play with friends, or give the dices any other use you want. Same as the duels, you can call the dices via inline message:"
-            +"</i>\n\n@WanderersTavernBot + <code>space</code>\n\n<i>Just as easy as that!"
+            +"</i>\n\n@WaTavBot + <code>space</code>\n\n<i>Just as easy as that!"
             +"</i>")
 
     update.message.reply_text(text=text,parse_mode=ParseMode.HTML)
