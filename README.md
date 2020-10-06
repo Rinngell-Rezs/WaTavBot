@@ -10,11 +10,11 @@ MMORPG basado en texto, en forma de Bot de Telegram.
 
 
 
-[* → Aún no implementado]
+`[* → Aún no implementado]`
 
-[() → Script a modificar]
+`[() → Script a modificar]`
 
-[(?) → Aún sin confirmar]
+`[(?) → Aún sin confirmar]`
 
 ### Cosas por hacer (En orden de importancia):
 
