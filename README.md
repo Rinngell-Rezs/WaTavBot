@@ -16,22 +16,22 @@ MMORPG basado en texto, en forma de Bot de Telegram.
 
 [(?) → Aún sin confirmar]
 
-### Cosas por hacer:
+### Cosas por hacer (En orden de importancia):
 
-* [ ] ´(weapons.py)´ Terminar la lista de armas
+* [ ] `(weapons.py)` Terminar la lista de armas
 
-* [ ] ´(WatTavBot.py)´ Añadir el matchmaking para duelos, dados y para beber
+* [ ] `(WatTavBot.py)` Añadir el matchmaking para duelos, dados y para beber
 
-* [ ] ´(WatTavBot.py: *battle.py,*dices.py,*beer.py)´ Pasar cada actividad a un script individual
+* [ ] `(WatTavBot.py: *battle.py,*dices.py,*beer.py)` Pasar cada actividad a un script individual
 
-* [ ] ´(*matchmaking.py)´ Añadir un script exclusivo para el matchmaking, para realizarlo con sólo una función, a través de palabras clave
+* [ ] `(*matchmaking.py)` Añadir un script exclusivo para el matchmaking, para realizarlo con sólo una función, a través de palabras clave
 
-* [ ] ´(?)´ Añadir más texto a los duelos
+* [ ] `(?)` Añadir más texto a los duelos
 
-* [ ] ´(?)´ Añadir sistema de dinero, experiencia y niveles
+* [ ] `(?)` Añadir sistema de dinero, experiencia y niveles
 
-* [ ] ´(?)´ Añadir forja de armas personalizadas
+* [ ] `(?)` Añadir forja de armas personalizadas
 
-* [ ] ´(?)´ Añadir más juegos de azar para multijugador
+* [ ] `(?)` Añadir más juegos de azar para multijugador
 
-* [ ] ´(?)´ ¿Modo aventura? → ´(?)´También, mapa por coordenadas xyz, con detección de cercanía e interracción. 
+* [ ] `(?)` ¿Modo aventura? → `(?)`También, mapa por coordenadas xyz, con detección de cercanía e interracción. 
